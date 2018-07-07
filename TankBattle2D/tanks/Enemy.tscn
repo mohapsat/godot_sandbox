@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tanks/Tank.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tanks/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://assets/Spritesheet/onlyObjects_retina_rotated.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 40, 40 )
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 250.2
+
+[node name="Enemy" index="0" instance=ExtResource( 1 )]
+
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision" ]
+Bullet = null
+speed = 150
+rotation_speed = 20.0
+gun_cooldown = 1.0
+health = 50
+turret_speed = 1.0
+detect_radius = 400
+
+[node name="Body" parent="." index="0"]
+
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 268, 186, 80, 77 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+[node name="Turret" parent="." index="2"]
+
+rotation = 0.0041242
+texture = ExtResource( 3 )
+offset = Vector2( 20, 0 )
+region_enabled = true
+region_rect = Rect2( 370, 13, 61, 26 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Muzzle" parent="Turret" index="0"]
+
+position = Vector2( 55, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="DetectRadius-Area2D" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRadius-Area2D" index="0"]
+
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="DetectRadius-Area2D" to="." method="_on_DetectRadiusArea2D_body_entered"]
+
+[connection signal="body_exited" from="DetectRadius-Area2D" to="." method="_on_DetectRadiusArea2D_body_exited"]
+
+

@@ -1,0 +1,125 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://maps/Map.gd" type="Script" id=1]
+[ext_resource path="res://terrain/terrain_tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://tanks/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://tanks/Enemy.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1060, 70, -26.7774, -35.0166, -42.2259, 74.1528, 960, 120, 0, 0, 0, 0, 1030, 190, 0, 0, 136.977, -19.5681, 1480, 190, 0, 0, 0, 0, 1600, 260, 0, 0, -19.5286, 74.1632, 1600, 620, 0, 0, 0, 0, 1680, 710, 0, 0, 93.7291, 15.3986, 1770, 710, 0, 0, 0, 0, 1860, 630, 0, 0, 28.7889, -90.6465, 1860, 140, 0, 0, 0, 0, 1770, 70, 0, 0, 0, 0, 1080, 70, 0, 0, 0, 0, 1060, 70 )
+}
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 201.46, 23.7012, 50, 970, 0, 0, 0, 0, 190, 830, 0, 0, -21.0677, -105.339, 190, 760, 0, 0, 0, 0, 300, 710, 0, 0, 69.7868, 5.26693, 380, 710, 0, 0, 0, 0, 450, 620, 0, 0, 15.8008, -85.5876, 450, 540, 0, 0, 0, 0, 390, 460, 0, 0, -96.1215, 32.9183, 280, 450, 0, 0, 0, 0, 190, 390, 0, 0, -15.8008, -126.406, 190, 150, 0, 0, 0, 0, 330, 70, 0, 0, 85.5876, 26.3347, 480, 60, 0, 0, 0, 0, 580, -20, 0, 0, 15.8008, -115.872, 580, -100, 0, 0, 0, 0, 460, -190, 0, 0, 0, 0, -190, -190, 0, 0, 0, 0, -190, 960, 0, 0, 0, 0, 0, 970, 0, 0, 0, 0, 50, 970 )
+}
+
+[node name="Map01" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Ground" type="TileMap" parent="." index="0"]
+
+modulate = Color( 0.984375, 0.979083, 0.979083, 1 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 128, 128 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65537, 2, 0, -131072, 2, 0, -131071, 2, 0, -131070, 2, 0, -131069, 2, 0, -131068, 14, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 7, 0, -131062, 20, 0, -131061, 20, 0, -131060, 21, 0, -131059, 20, 0, -131058, 20, 0, -131057, 20, 0, -131056, 20, 0, -131055, 20, 0, -131054, 20, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 1, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 7, 0, -65526, 20, 0, -65525, 20, 0, -65524, 21, 0, -65523, 20, 0, -65522, 20, 0, -65521, 20, 0, -65520, 20, 0, -65519, 33, 0, -65518, 22, 0, 65535, 0, 0, 0, 0, 0, 1, 13, 0, 2, 2, 0, 3, 2, 0, 4, 5, 0, 5, 2, 0, 6, 2, 0, 7, 6, 0, 8, 2, 0, 9, 27, 0, 10, 22, 0, 11, 22, 0, 12, 25, 0, 13, 22, 0, 14, 26, 0, 15, 22, 0, 16, 22, 0, 17, 24, 0, 18, 30, 0, 131071, 0, 0, 65536, 0, 0, 65537, 1, 0, 65538, 0, 0, 65539, 13, 0, 65540, 2, 0, 65541, 2, 0, 65542, 2, 0, 65543, 5, 0, 65544, 2, 0, 65545, 27, 0, 65546, 22, 0, 65547, 22, 0, 65548, 34, 0, 65549, 30, 0, 65550, 21, 0, 65551, 30, 0, 65552, 30, 0, 65553, 21, 0, 65554, 30, 0, 196607, 0, 0, 131072, 0, 0, 131073, 1, 0, 131074, 0, 0, 131075, 1, 0, 131076, 0, 0, 131077, 13, 0, 131078, 14, 0, 131079, 0, 0, 131080, 0, 0, 131081, 7, 0, 131082, 30, 0, 131083, 30, 0, 131084, 23, 0, 131085, 22, 0, 131086, 32, 0, 131087, 22, 0, 131088, 22, 0, 131089, 24, 0, 131090, 30, 0, 262143, 0, 0, 196608, 0, 0, 196609, 3, 0, 196610, 2, 0, 196611, 4, 0, 196612, 0, 0, 196613, 1, 0, 196614, 1, 0, 196615, 0, 0, 196616, 0, 0, 196617, 7, 0, 196618, 30, 0, 196619, 30, 0, 196620, 21, 0, 196621, 30, 0, 196622, 21, 0, 196623, 30, 0, 196624, 30, 0, 196625, 21, 0, 196626, 30, 0, 327679, 0, 0, 262144, 0, 0, 262145, 1, 0, 262146, 0, 0, 262147, 1, 0, 262148, 0, 0, 262149, 1, 0, 262150, 1, 0, 262151, 0, 0, 262152, 0, 0, 262153, 7, 0, 262154, 30, 0, 262155, 30, 0, 262156, 21, 0, 262157, 30, 0, 262158, 21, 0, 262159, 30, 0, 262160, 30, 0, 262161, 21, 0, 262162, 30, 0, 393215, 0, 0, 327680, 0, 0, 327681, 3, 0, 327682, 2, 0, 327683, 4, 0, 327684, 0, 0, 327685, 1, 0, 327686, 1, 0, 327687, 0, 0, 327688, 0, 0, 327689, 7, 0, 327690, 30, 0, 327691, 30, 0, 327692, 35, 0, 327693, 22, 0, 327694, 32, 0, 327695, 22, 0, 327696, 22, 0, 327697, 25, 0, 327698, 34, 0, 458751, 0, 0, 393216, 0, 0, 393217, 1, 0, 393218, 0, 0, 393219, 15, 0, 393220, 2, 0, 393221, 16, 0, 393222, 1, 0, 393223, 0, 0, 393224, 0, 0, 393225, 7, 0, 393226, 30, 0, 393227, 30, 0, 393228, 30, 0, 393229, 30, 0, 393230, 21, 0, 393231, 30, 0, 393232, 30, 0, 393233, 30, 0, 393234, 21, 0, 524287, 2, 0, 458752, 2, 0, 458753, 16, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 7, 0, 458758, 38, 0, 458759, 18, 0, 458760, 18, 0, 458761, 30, 0, 458762, 30, 0, 458763, 30, 0, 458764, 30, 0, 458765, 30, 0, 458766, 21, 0, 458767, 30, 0, 458768, 30, 0, 458769, 30, 0, 458770, 23, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 7, 0, 524294, 35, 0, 524295, 22, 0, 524296, 22, 0, 524297, 22, 0, 524298, 26, 0, 524299, 22, 0, 524300, 22, 0, 524301, 22, 0, 524302, 25, 0, 524303, 22, 0, 524304, 22, 0, 524305, 22, 0, 524306, 36, 0 )
+_sections_unfolded = [ "Cell", "Visibility" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+
+rotation_speed = 10.0
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="Paths-Node2D" type="Node2D" parent="." index="3"]
+
+[node name="Path2D" type="Path2D" parent="Paths-Node2D" index="0"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+rotation = 0.000532631
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths-Node2D/Path2D" index="0"]
+
+position = Vector2( 1060, 70 )
+rotation = 3.01206
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="Enemy" parent="Paths-Node2D/Path2D/PathFollow2D" index="0" instance=ExtResource( 4 )]
+
+speed = 200
+turret_speed = 10.0
+
+[node name="Path2D2" type="Path2D" parent="Paths-Node2D" index="1"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths-Node2D/Path2D2" index="0"]
+
+position = Vector2( 50, 970 )
+rotation = 0.111821
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="Enemy" parent="Paths-Node2D/Path2D2/PathFollow2D" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( -110, 960 )
+speed = 200
+turret_speed = 10.0
+
+
