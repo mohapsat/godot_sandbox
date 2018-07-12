@@ -11,6 +11,7 @@ config_version=3
 [application]
 
 config/name="G5_PlayerControlledSprite"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
 [importer_defaults]
