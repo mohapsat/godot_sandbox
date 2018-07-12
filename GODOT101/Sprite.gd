@@ -27,6 +27,7 @@ func _process(delta):
 		velocity.y *= -1
 	
 	rotation += PI * delta # PI is equivalent to 180 deg in radians
+	# can be randomized as well
 #	print(position)
 	
 	
