@@ -6,8 +6,18 @@
 [node name="Sprite" type="Sprite" index="0"]
 
 position = Vector2( 567, 291 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="spawn_timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
 
 
