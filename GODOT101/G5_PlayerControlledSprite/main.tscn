@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://level_label.tscn" type="PackedScene" id=3]
 [ext_resource path="res://score_label.tscn" type="PackedScene" id=4]
+[ext_resource path="res://timer_label.tscn" type="PackedScene" id=5]
 
 [node name="main" type="Node" index="0"]
 
@@ -27,5 +28,25 @@ margin_top = -20.0
 margin_bottom = -6.0
 rect_scale = Vector2( 5, 5 )
 _sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="timer_label" parent="." index="4" instance=ExtResource( 5 )]
+
+visible = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -172.0
+margin_top = -50.0
+margin_right = -132.0
+margin_bottom = -36.0
+align = 1
+
+[node name="game_timer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="game_timer" to="." method="_on_game_timer_timeout"]
 
 
