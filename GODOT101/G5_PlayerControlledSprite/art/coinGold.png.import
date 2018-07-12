@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alienGreen_front.png-1530ae8a0a12337395b823ede1339604.stex"
+path="res://.import/coinGold.png-f1c9a0a5fa3106f0ea09fc32dead14d2.stex"
 
 [deps]
 
-source_file="res://Player/alienGreen_front.png"
-dest_files=[ "res://.import/alienGreen_front.png-1530ae8a0a12337395b823ede1339604.stex" ]
+source_file="res://art/coinGold.png"
+dest_files=[ "res://.import/coinGold.png-f1c9a0a5fa3106f0ea09fc32dead14d2.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

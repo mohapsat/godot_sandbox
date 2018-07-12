@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gemBlue.png-14dc2e62daee2b9e4848900a23801a03.stex"
+path="res://.import/gemYellow.png-67895cee1915d2e1aa5f24a031cb8bea.stex"
 
 [deps]
 
-source_file="res://gemBlue.png"
-dest_files=[ "res://.import/gemBlue.png-14dc2e62daee2b9e4848900a23801a03.stex" ]
+source_file="res://art/gemYellow.png"
+dest_files=[ "res://.import/gemYellow.png-67895cee1915d2e1aa5f24a031cb8bea.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

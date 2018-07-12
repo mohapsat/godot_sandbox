@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alienGreen_hit.png-2027f1ec5b1dfa77f4edcf02797fb611.stex"
+path="res://.import/alienGreen_climb1.png-cc6683b6256480451c7a6cc7cbe01ddc.stex"
 
 [deps]
 
-source_file="res://Player/alienGreen_hit.png"
-dest_files=[ "res://.import/alienGreen_hit.png-2027f1ec5b1dfa77f4edcf02797fb611.stex" ]
+source_file="res://art/Player/alienGreen_climb1.png"
+dest_files=[ "res://.import/alienGreen_climb1.png-cc6683b6256480451c7a6cc7cbe01ddc.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

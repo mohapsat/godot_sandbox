@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alienGreen_stand.png-af574ccbcaf309b9e886cca6d8daf708.stex"
+path="res://.import/gemBlue.png-a3dac5de476e905bdb18b213f9a4c0e4.stex"
 
 [deps]
 
-source_file="res://Player/alienGreen_stand.png"
-dest_files=[ "res://.import/alienGreen_stand.png-af574ccbcaf309b9e886cca6d8daf708.stex" ]
+source_file="res://art/gemBlue.png"
+dest_files=[ "res://.import/gemBlue.png-a3dac5de476e905bdb18b213f9a4c0e4.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
