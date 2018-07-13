@@ -43,7 +43,7 @@ align = 1
 [node name="game_timer" type="Timer" parent="." index="5"]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 20.0
 one_shot = true
 autostart = true
 

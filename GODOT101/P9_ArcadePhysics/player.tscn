@@ -1,0 +1,70 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://art/player/idle/frame-1.png" type="Texture" id=2]
+[ext_resource path="res://art/player/idle/frame-2.png" type="Texture" id=3]
+[ext_resource path="res://art/player/running/frame-1.png" type="Texture" id=4]
+[ext_resource path="res://art/player/running/frame-2.png" type="Texture" id=5]
+[ext_resource path="res://art/player/running/frame-3.png" type="Texture" id=6]
+[ext_resource path="res://art/player/running/frame-4.png" type="Texture" id=7]
+[ext_resource path="res://art/player/running/frame-5.png" type="Texture" id=8]
+[ext_resource path="res://art/player/running/frame-6.png" type="Texture" id=9]
+[ext_resource path="res://art/player/got hit/frame-got-hit.png" type="Texture" id=10]
+[ext_resource path="res://art/player/jump/jump_fall.png" type="Texture" id=11]
+[ext_resource path="res://art/player/jump/jump_up.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "running",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "got_hit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "jump",
+"speed": 3.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 46.6026
+height = 43.5981
+
+[node name="player" type="KinematicBody2D" index="0"]
+
+position = Vector2( 379.397, 243.402 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sprite" type="AnimatedSprite" parent="." index="0"]
+
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 2 )
+animation = "running"
+frame = 2
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+
