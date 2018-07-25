@@ -1,0 +1,16 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+
+code = "shader_type canvas_item;
+
+uniform float scale = 0.05;
+
+void fragment()
+{
+	vec4 normal = texture(TEXTURE,UV);
+	vec2 offset = (normal.xy*2.0-vec2(1.0))*vec2(-1.0,1.0);
+	COLOR.rgb = texture(SCREEN_TEXTURE,SCREEN_UV+offset*scale).rgb;
+	COLOR.a *= normal.a*length(COLOR.rgb);
+}"
+

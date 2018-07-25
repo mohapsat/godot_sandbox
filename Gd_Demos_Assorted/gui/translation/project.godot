@@ -1,0 +1,31 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Translation Demo"
+run/main_scene="res://main.tscn"
+config/icon="res://icon.png"
+
+[gdnative]
+
+singletons=[  ]
+
+[locale]
+
+translation_remaps={
+"res://flag_uk.png": [ "res://flag_spain.png:es", "res://flag_japan.png:ja" ],
+"res://hello_en.wav": PoolStringArray( "res://hello_es.wav:es", "res://hello_jp.wav:ja" )
+}
+translations=PoolStringArray( "res://text.en.translation", "res://text.es.translation", "res://text.ja.translation" )
+
+[memory]
+
+multithread/thread_rid_pool_prealloc=60

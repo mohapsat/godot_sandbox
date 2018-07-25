@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="223" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+	<ext_resource path="res://Assets/scripts/Menu.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/sprites/light.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/scripts/graph.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/scripts/load.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/scripts/file_dialog.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/scripts/tree.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/scripts/searchbar.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/sprites/Icons/cinema/png/reel.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0001.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0002.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0003.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0004.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0005.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0006.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0007.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0008.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0009.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0010.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0011.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0012.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0013.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0014.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0015.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0016.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0017.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0018.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0019.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0020.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0021.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0022.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0023.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0024.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0025.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0026.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0027.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0028.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0029.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0030.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0031.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0032.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0033.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0034.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0035.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0036.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0037.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0038.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0039.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0040.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0041.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0042.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0043.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0044.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0045.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0046.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0047.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0048.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0049.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0050.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0051.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0052.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0053.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0054.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0055.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0056.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0057.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0058.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0059.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0060.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0061.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0062.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0063.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0064.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0065.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0066.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0067.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0068.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0069.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0070.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0071.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0072.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0073.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0074.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0075.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0076.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0077.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0078.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0079.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0080.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0081.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0082.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0083.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0084.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0085.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0086.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0087.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0088.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0089.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0090.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0091.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0092.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0093.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0094.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0095.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0096.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0097.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0098.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0099.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk2/edwalk2.0100.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/scripts/loopSprite.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/scripts/animation_speed_slider.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0001.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0002.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0003.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0004.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0005.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0006.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0007.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0008.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0009.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0010.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0011.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0012.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0013.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0014.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0015.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0016.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0017.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0018.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0019.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0020.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0021.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0022.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0023.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0024.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0025.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0026.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0027.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0028.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0029.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0030.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0031.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0032.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0033.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0034.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0035.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0036.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0037.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0038.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0039.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0040.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0041.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0042.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0043.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0044.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0045.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0046.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0047.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0048.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0049.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0050.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0051.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0052.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0053.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0054.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0055.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0056.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0057.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0058.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0059.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0060.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0061.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0062.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0063.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0064.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0065.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0066.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0067.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0068.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0069.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0070.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0071.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0072.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0073.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0074.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0075.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0076.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0077.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0078.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0079.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0080.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0081.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0082.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0083.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0084.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0085.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0086.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0087.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0088.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0089.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0090.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0091.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0092.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0093.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0094.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0095.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0096.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0097.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0098.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0099.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0100.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0101.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0102.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0103.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0104.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0105.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0106.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0107.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/sprites/edwalk3/edwalk3.0108.png" type="Texture"></ext_resource>
+	<ext_resource path="res://Assets/scripts/reload.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Assets/scripts/quit.gd" type="Script"></ext_resource>
+	<resource type="SpriteFrames" path="local://0">
+		<array name="frames" len="100" shared="false">
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0001.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0002.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0003.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0004.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0005.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0006.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0007.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0008.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0009.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0010.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0011.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0012.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0013.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0014.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0015.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0016.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0017.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0018.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0019.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0020.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0021.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0022.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0023.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0024.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0025.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0026.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0027.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0028.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0029.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0030.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0031.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0032.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0033.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0034.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0035.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0036.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0037.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0038.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0039.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0040.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0041.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0042.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0043.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0044.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0045.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0046.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0047.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0048.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0049.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0050.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0051.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0052.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0053.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0054.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0055.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0056.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0057.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0058.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0059.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0060.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0061.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0062.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0063.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0064.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0065.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0066.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0067.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0068.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0069.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0070.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0071.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0072.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0073.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0074.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0075.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0076.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0077.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0078.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0079.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0080.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0081.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0082.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0083.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0084.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0085.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0086.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0087.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0088.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0089.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0090.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0091.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0092.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0093.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0094.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0095.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0096.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0097.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0098.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0099.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk2/edwalk2.0100.png">  </resource>
+		</array>
+
+	</resource>
+	<resource type="SpriteFrames" path="local://1">
+		<array name="frames" len="108" shared="false">
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0001.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0002.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0003.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0004.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0005.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0006.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0007.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0008.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0009.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0010.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0011.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0012.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0013.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0014.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0015.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0016.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0017.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0018.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0019.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0020.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0021.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0022.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0023.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0024.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0025.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0026.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0027.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0028.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0029.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0030.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0031.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0032.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0033.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0034.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0035.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0036.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0037.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0038.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0039.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0040.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0041.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0042.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0043.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0044.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0045.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0046.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0047.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0048.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0049.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0050.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0051.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0052.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0053.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0054.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0055.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0056.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0057.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0058.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0059.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0060.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0061.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0062.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0063.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0064.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0065.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0066.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0067.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0068.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0069.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0070.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0071.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0072.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0073.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0074.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0075.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0076.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0077.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0078.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0079.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0080.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0081.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0082.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0083.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0084.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0085.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0086.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0087.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0088.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0089.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0090.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0091.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0092.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0093.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0094.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0095.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0096.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0097.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0098.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0099.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0100.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0101.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0102.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0103.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0104.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0105.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0106.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0107.png">  </resource>
+			<resource  resource_type="Texture" path="res://Assets/sprites/edwalk3/edwalk3.0108.png">  </resource>
+		</array>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "names" </string>
+			<string_array  len="126">
+				<string> "Control" </string>
+				<string> "_import_path" </string>
+				<string> "visibility/visible" </string>
+				<string> "visibility/opacity" </string>
+				<string> "visibility/self_opacity" </string>
+				<string> "visibility/light_mask" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "focus_neighbour/left" </string>
+				<string> "focus_neighbour/top" </string>
+				<string> "focus_neighbour/right" </string>
+				<string> "focus_neighbour/bottom" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "size_flags/stretch_ratio" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "Light2D" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/rot" </string>
+				<string> "transform/scale" </string>
+				<string> "z/z" </string>
+				<string> "z/relative" </string>
+				<string> "enabled" </string>
+				<string> "texture" </string>
+				<string> "offset" </string>
+				<string> "scale" </string>
+				<string> "color" </string>
+				<string> "energy" </string>
+				<string> "mode" </string>
+				<string> "range/height" </string>
+				<string> "range/z_min" </string>
+				<string> "range/z_max" </string>
+				<string> "range/layer_min" </string>
+				<string> "range/layer_max" </string>
+				<string> "range/item_mask" </string>
+				<string> "shadow/enabled" </string>
+				<string> "shadow/buffer_size" </string>
+				<string> "shadow/esm_multiplier" </string>
+				<string> "shadow/item_mask" </string>
+				<string> "GraphEdit" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "GraphNode" </string>
+				<string> "title" </string>
+				<string> "show_close" </string>
+				<string> "GUI" </string>
+				<string> "Background" </string>
+				<string> "Panel" </string>
+				<string> "Invisible Button" </string>
+				<string> "Button" </string>
+				<string> "disabled" </string>
+				<string> "toggle_mode" </string>
+				<string> "is_pressed" </string>
+				<string> "click_on_press" </string>
+				<string> "text" </string>
+				<string> "icon" </string>
+				<string> "flat" </string>
+				<string> "clip_text" </string>
+				<string> "align" </string>
+				<string> "TextEdit" </string>
+				<string> "Object Bar" </string>
+				<string> "anchor/bottom" </string>
+				<string> "HButtonArray" </string>
+				<string> "button/count" </string>
+				<string> "button/min_button_size" </string>
+				<string> "button/align" </string>
+				<string> "button/0/text" </string>
+				<string> "button/0/icon" </string>
+				<string> "button/1/text" </string>
+				<string> "button/1/icon" </string>
+				<string> "button/2/text" </string>
+				<string> "button/2/icon" </string>
+				<string> "button/3/text" </string>
+				<string> "button/3/icon" </string>
+				<string> "button/selected" </string>
+				<string> "Script Bar" </string>
+				<string> "FileDialog" </string>
+				<string> "popup/exclusive" </string>
+				<string> "window/title" </string>
+				<string> "Tree" </string>
+				<string> "Search Bar" </string>
+				<string> "LineEdit" </string>
+				<string> "max_length" </string>
+				<string> "editable" </string>
+				<string> "secret" </string>
+				<string> "placeholder" </string>
+				<string> "reel backdrop" </string>
+				<string> "Sprite" </string>
+				<string> "centered" </string>
+				<string> "flip_h" </string>
+				<string> "flip_v" </string>
+				<string> "vframes" </string>
+				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "modulate" </string>
+				<string> "region" </string>
+				<string> "region_rect" </string>
+				<string> "Animation Side" </string>
+				<string> "Node2D" </string>
+				<string> "AnimatedSprite" </string>
+				<string> "frames" </string>
+				<string> "delay" </string>
+				<string> "HSlider" </string>
+				<string> "range/min" </string>
+				<string> "range/max" </string>
+				<string> "range/step" </string>
+				<string> "range/page" </string>
+				<string> "range/value" </string>
+				<string> "range/exp_edit" </string>
+				<string> "rounded_values" </string>
+				<string> "tick_count" </string>
+				<string> "ticks_on_borders" </string>
+				<string> "Animation Front" </string>
+				<string> "Buttons" </string>
+				<string> "reload_btn" </string>
+				<string> "hint/tooltip" </string>
+				<string> "quit_btn" </string>
+				<string> "Label" </string>
+				<string> "valign" </string>
+				<string> "autowrap" </string>
+				<string> "uppercase" </string>
+				<string> "percent_visible" </string>
+				<string> "Label1" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 27 </int>
+			<string> "nodes" </string>
+			<int_array  len="1377"> 				-1, -1, 0, 0, -1, 18, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 6, 4, 7, 4, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 17, 7, 18, 8, 0, 0, 0, 19, 19, -1, 28, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 20, 9, 21, 10, 22, 11, 23, 12, 24, 1, 25, 1, 26, 13, 27, 14, 28, 2, 29, 15, 30, 2, 31, 12, 32, 10, 33, 16, 34, 17, 35, 12, 36, 12, 37, 3, 38, 1, 39, 18, 40, 19, 41, 3, 18, 20, 0, 0, 0, 42, 42, -1, 20, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 21, 44, 22, 6, 23, 7, 24, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 17, 25, 18, 26, 0, 2, 0, 45, 45, -1, 19, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 44, 27, 6, 28, 7, 29, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 5, 14, 6, 15, 6, 16, 2, 46, 30, 47, 5, 0, 0, 0, 0, 48, -1, 17, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 6, 4, 7, 4, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 18, 31, 0, 4, 0, 50, 49, -1, 18, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 44, 28, 6, 32, 7, 33, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 18, 34, 0, 4, 0, 52, 51, -1, 29, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 35, 44, 36, 6, 37, 7, 38, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 53, 5, 54, 5, 55, 5, 56, 5, 57, 39, 58, 40, 59, 5, 60, 5, 61, 3, 17, 41, 18, 42, 0, 4, 0, 62, 62, -1, 18, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 44, 28, 6, 43, 7, 33, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 18, 44, 0, 4, 0, 50, 63, -1, 19, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 64, 3, 43, 45, 6, 32, 7, 46, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 18, 47, 0, 8, 0, 65, 65, -1, 30, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 48, 44, 49, 6, 50, 7, 51, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 66, 52, 67, 53, 68, 52, 69, 54, 70, 40, 71, 55, 72, 40, 73, 56, 74, 40, 75, 57, 76, 40, 77, 12, 0, 4, 0, 50, 78, -1, 17, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 6, 45, 7, 28, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 18, 58, 0, 10, 0, 65, 65, -1, 25, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 44, 49, 6, 45, 7, 51, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 66, 6, 67, 53, 68, 52, 69, 59, 70, 40, 71, 60, 72, 40, 77, 12, 0, 4, 0, 79, 79, -1, 21, 1, 0, 2, 5, 3, 2, 4, 2, 5, 3, 43, 61, 44, 43, 6, 62, 7, 63, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 80, 1, 81, 64, 17, 65, 0, 4, 0, 82, 82, -1, 20, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 66, 44, 28, 6, 45, 7, 67, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 17, 68, 18, 69, 0, 4, 0, 84, 83, -1, 25, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 70, 44, 71, 6, 72, 7, 73, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 57, 74, 85, 12, 86, 1, 87, 5, 17, 75, 18, 76, 88, 74, 0, 0, 0, 90, 89, -1, 22, 1, 0, 2, 1, 3, 77, 4, 2, 5, 3, 20, 78, 21, 10, 22, 79, 23, 12, 24, 1, 26, 80, 91, 1, 27, 14, 92, 5, 93, 5, 94, 3, 95, 3, 96, 12, 97, 81, 98, 5, 99, 82, 18, 83, 0, 0, 0, 101, 100, -1, 11, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 20, 84, 21, 10, 22, 85, 23, 12, 24, 1, 18, 86, 0, 16, 0, 102, 102, -1, 18, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 20, 14, 21, 10, 22, 85, 23, 12, 24, 1, 103, 87, 91, 1, 92, 5, 93, 5, 97, 81, 17, 88, 18, 89, 104, 12, 0, 16, 0, 105, 105, -1, 27, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 90, 44, 91, 6, 92, 7, 93, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 16, 2, 106, 10, 107, 94, 108, 95, 109, 10, 110, 10, 111, 5, 112, 5, 113, 12, 114, 5, 17, 96, 0, 0, 0, 101, 115, -1, 11, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 20, 97, 21, 10, 22, 85, 23, 12, 24, 1, 18, 98, 0, 19, 0, 102, 102, -1, 18, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 20, 14, 21, 10, 22, 85, 23, 12, 24, 1, 103, 99, 91, 1, 92, 5, 93, 5, 97, 81, 17, 88, 18, 100, 104, 12, 0, 19, 0, 105, 105, -1, 27, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 101, 44, 102, 6, 103, 7, 104, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 16, 2, 106, 10, 107, 94, 108, 95, 109, 10, 110, 10, 111, 5, 112, 5, 113, 12, 114, 5, 17, 96, 0, 0, 0, 0, 116, -1, 16, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 6, 4, 7, 4, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 0, 22, 0, 52, 117, -1, 30, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 105, 44, 28, 6, 106, 7, 107, 118, 108, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 53, 5, 54, 5, 55, 5, 56, 5, 57, 109, 58, 40, 59, 5, 60, 5, 61, 3, 17, 110, 18, 111, 0, 22, 0, 52, 119, -1, 30, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 112, 44, 28, 6, 113, 7, 107, 118, 114, 8, 0, 9, 0, 10, 0, 11, 0, 12, 5, 13, 1, 14, 6, 15, 6, 16, 2, 53, 5, 54, 5, 55, 5, 56, 5, 57, 115, 58, 40, 59, 5, 60, 5, 61, 3, 17, 116, 18, 117, 0, 0, 0, 120, 120, -1, 30, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 70, 44, 118, 6, 119, 7, 120, 8, 0, 9, 0, 10, 0, 11, 0, 12, 1, 13, 1, 14, 6, 16, 2, 106, 10, 107, 2, 108, 2, 109, 2, 110, 10, 111, 5, 112, 5, 57, 121, 61, 12, 121, 12, 122, 5, 123, 5, 124, 53, 0, 0, 0, 120, 125, -1, 30, 1, 0, 2, 1, 3, 2, 4, 2, 5, 3, 43, 122, 44, 123, 6, 124, 7, 125, 8, 0, 9, 0, 10, 0, 11, 0, 12, 1, 13, 1, 14, 6, 16, 2, 106, 10, 107, 2, 108, 2, 109, 2, 110, 10, 111, 5, 112, 5, 57, 121, 61, 12, 121, 12, 122, 5, 123, 5, 124, 53, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="126" shared="false">
+				<node_path> "" </node_path>
+				<bool> True </bool>
+				<real> 1 </real>
+				<int> 1 </int>
+				<real> 40 </real>
+				<bool> False </bool>
+				<int> 2 </int>
+				<resource  resource_type="Script" path="res://Assets/scripts/Menu.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "ofs" </string>
+							<vector2> 54.5417, 109.973 </vector2>
+							<string> "snap_grid" </string>
+							<bool> True </bool>
+							<string> "snap_offset" </string>
+							<vector2> 0, 0 </vector2>
+							<string> "snap_pixel" </string>
+							<bool> False </bool>
+							<string> "snap_relative" </string>
+							<bool> False </bool>
+							<string> "snap_rotation" </string>
+							<bool> False </bool>
+							<string> "snap_rotation_offset" </string>
+							<real> 0 </real>
+							<string> "snap_rotation_step" </string>
+							<real> 0.261799 </real>
+							<string> "snap_show_grid" </string>
+							<bool> False </bool>
+							<string> "snap_step" </string>
+							<vector2> 10, 10 </vector2>
+							<string> "zoom" </string>
+							<real> 0.735093 </real>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+							</array>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 2 </int>
+							<string> "sources" </string>
+							<array  len="6" shared="false">
+								<string> "res://Assets/scripts/tree.gd" </string>
+								<string> "res://Assets/scripts/file_dialog.gd" </string>
+								<string> "res://Assets/scripts/graph.gd" </string>
+								<string> "res://Assets/scripts/Menu.gd" </string>
+								<string> "res://Assets/scripts/loopSprite.gd" </string>
+								<string> "res://Assets/scripts/load.gd" </string>
+							</array>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 910, 40.0001 </vector2>
+				<real> 0 </real>
+				<vector2> 0.78125, 0.703126 </vector2>
+				<int> 0 </int>
+				<resource  resource_type="Texture" path="res://Assets/sprites/light.png">  </resource>
+				<vector2> 0, 0 </vector2>
+				<color> 1, 0.895132, 0.566823, 1 </color>
+				<int> -1024 </int>
+				<int> 1024 </int>
+				<int> 2048 </int>
+				<real> 80 </real>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 1050 </real>
+				<real> 30 </real>
+				<real> 1580 </real>
+				<real> 240 </real>
+				<resource  resource_type="Script" path="res://Assets/scripts/graph.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 210 </real>
+				<real> 60 </real>
+				<real> 239 </real>
+				<string> "Flow" </string>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 1020 </real>
+				<real> 770 </real>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 382 </real>
+				<real> 130 </real>
+				<real> 910 </real>
+				<real> 650 </real>
+				<string> "" </string>
+				<resource name=""></resource>				<resource  resource_type="Script" path="res://Assets/scripts/load.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 140 </real>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 290 </real>
+				<real> -20 </real>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 20 </real>
+				<real> 10 </real>
+				<real> 720 </real>
+				<real> 50 </real>
+				<int> 4 </int>
+				<real> -1 </real>
+				<string> "Change Background" </string>
+				<string> "Reframe Shot" </string>
+				<string> "Add Character" </string>
+				<string> "Add Prop" </string>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<string> "Script" </string>
+				<string> "Outline" </string>
+				<real> 710 </real>
+				<real> 1010 </real>
+				<real> 470 </real>
+				<string> "Load an Image Prop" </string>
+				<resource  resource_type="Script" path="res://Assets/scripts/file_dialog.gd">  </resource>
+				<real> 150 </real>
+				<real> 760 </real>
+				<resource  resource_type="Script" path="res://Assets/scripts/tree.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 730 </real>
+				<real> 70 </real>
+				<real> 980 </real>
+				<real> 93 </real>
+				<string> "search..." </string>
+				<resource  resource_type="Script" path="res://Assets/scripts/searchbar.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 0.25 </real>
+				<vector2> 670, 410 </vector2>
+				<vector2> 0.742188, 0.742188 </vector2>
+				<resource  resource_type="Texture" path="res://Assets/sprites/Icons/cinema/png/reel.png">  </resource>
+				<color> 1, 1, 1, 1 </color>
+				<rect2> 0, 0, 0, 0 </rect2>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 762, 502 </vector2>
+				<vector2> 1, 1 </vector2>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<resource  resource_type="SpriteFrames" path="local://0">  </resource>
+				<resource  resource_type="Script" path="res://Assets/scripts/loopSprite.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> -252 </real>
+				<real> 228 </real>
+				<real> 258 </real>
+				<real> 278 </real>
+				<real> 0.1 </real>
+				<real> 0.05 </real>
+				<resource  resource_type="Script" path="res://Assets/scripts/animation_speed_slider.gd">  </resource>
+				<vector2> 1252, 492 </vector2>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<resource  resource_type="SpriteFrames" path="local://1">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> -182 </real>
+				<real> 238 </real>
+				<real> 328 </real>
+				<real> 288 </real>
+				<real> 320 </real>
+				<real> 376 </real>
+				<real> 90 </real>
+				<string> "Reload the scene" </string>
+				<string> "Reload" </string>
+				<resource  resource_type="Script" path="res://Assets/scripts/reload.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 400 </real>
+				<real> 430 </real>
+				<string> "Close the scene" </string>
+				<string> "X" </string>
+				<resource  resource_type="Script" path="res://Assets/scripts/quit.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 800 </real>
+				<real> 791 </real>
+				<real> 813 </real>
+				<string> "512 x 512" </string>
+				<real> 1220 </real>
+				<real> 790 </real>
+				<real> 1281 </real>
+				<real> 803 </real>
+			</array>
+			<string> "version" </string>
+			<int> 1 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

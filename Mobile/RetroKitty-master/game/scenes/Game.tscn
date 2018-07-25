@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Dispenser.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/GameHUD.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+dispenser = ExtResource( 2 )
+
+[node name="BackgroundRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -960.0
+margin_right = 540.0
+margin_bottom = 960.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.509804, 0.588235, 0.313726, 1 )
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 199.415, 376.759 )
+scale = Vector2( 6, 6 )
+
+[node name="Dispensers" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="Dispenser1" parent="Dispensers" index="0" instance=ExtResource( 2 )]
+
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Dispenser2" parent="Dispensers" index="1" instance=ExtResource( 2 )]
+
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Dispenser3" parent="Dispensers" index="2" instance=ExtResource( 2 )]
+
+scale = Vector2( 2.5, 2.5 )
+
+[node name="Dispenser4" parent="Dispensers" index="3" instance=ExtResource( 2 )]
+
+scale = Vector2( 2.5, 2.5 )
+
+[node name="GameHUD" parent="." index="3" instance=ExtResource( 4 )]
+
+margin_left = -540.0
+margin_right = 540.0
+
+[node name="StartCountdown" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 3.5
+one_shot = true
+autostart = true
+
+[node name="ShakeTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 0.05
+one_shot = false
+autostart = false
+
+[node name="Uptime" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 0.05
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="StartCountdown" to="." method="_on_StartCountdown_timeout"]
+
+[connection signal="timeout" from="ShakeTimer" to="." method="_on_ShakeTimer_timeout"]
+
+[connection signal="timeout" from="Uptime" to="." method="_on_Uptime_timeout"]
+
+

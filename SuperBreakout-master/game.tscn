@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/game.gd" type="Script" id=1]
+[ext_resource path="res://scenes/paddle.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+
+script = ExtResource( 1 )
+SPEED = 500
+
+[node name="Walls" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Shape" type="CollisionPolygon2D" parent="Walls" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, 0, 810, -50, 810, -50, -50, 1330, -50, 1330, 810, 1280, 810, 1280, 0 )
+
+[node name="Paddle" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 650, 710 )
+_sections_unfolded = [ "Transform" ]
+
+

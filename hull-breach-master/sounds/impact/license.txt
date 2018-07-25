@@ -1,0 +1,2 @@
+Copyright: Juhani Junkala
+License: CC0

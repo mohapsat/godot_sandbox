@@ -1,0 +1,52 @@
+,en
+START,Start
+OPTIONS,Options
+CREDITS,Credits
+HIGHSCORES,Highscores
+PAUSE,Pause
+CONTINUE,Continue
+QUIT,Quit
+BACK,Back
+RESOLUTION,Resolution
+SOUND,Sound
+CONTROL,Control
+THRUST,Thrust
+REVERSE_THRUST,Reverse Thrust
+STRAFE_LEFT,Strafe Left
+STRAFE_RIGHT,Strafe Right
+ROTATE_LEFT,Turn Left
+ROTATE_RIGHT,Turn Right
+SHOOT,Shoot
+SPECIAL,Special
+ADD_KEY,Add Key
+KEY_PRESSED,key pressed
+NEW_HIGHSCORE,New Highscore
+ENTER_NAME,enter name
+OK,OK
+CANCLE,Cancel
+APPLY,Apply
+SELECT_PLAYER,Select Player
+SELECT_DIFFICULTY,Select Difficulty
+LOADING,loading
+SPEED,Speed
+POWER,Power
+ARMOR,Armor
+FIRE_RATE,Fire Rate
+SPECIAL,Special
+MISSILES,Missiles
+MINE,Mine
+SHIELD,Shield
+SCORE,Score
+EASY,Easy
+NORMAL,Normal
+HARD,Hard
+ENGINE,Engine
+GRAPHICS,Graphics
+SOUNDS,Sounds
+FONT,font
+BY,by
+UI_SOUNDS,UI sounds
+SPACE_SHIELD_SOUNDS,space shield sounds
+ALARM_AND_IMPACT_SOUNDS,alarm and impact sounds
+EXPLOSION_SOUNDS,explosion sounds
+

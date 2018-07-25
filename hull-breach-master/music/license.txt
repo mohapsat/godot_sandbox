@@ -1,0 +1,8 @@
+INTRO.flac:
+Copyright: Jason Dagenet
+License: CC-BY 3.0
+
+Battle_1.ogg:
+Alexandr Zhelanov https://soundcloud.com/alexandr-zhelanov
+License: CC-BY 4.0
+

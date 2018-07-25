@@ -1,0 +1,5 @@
+project.godot
+test.tscn
+import
+*.import
+*.flags

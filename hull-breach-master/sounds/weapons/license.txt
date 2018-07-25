@@ -1,0 +1,12 @@
+Laser_05.wav:
+Copyright: Little Robot Sound Factory (www.littlerobotsoundfactory.com)
+License: CC-BY 3.0
+
+cg1.wav, flaunch.wav, rlaunch.wav:
+Copyright: Michel Baradari (apollo-music.de)
+License: CC-BY 3.0
+
+16.wav, 17.wav:
+Copyright: HorrorPen
+License: CC-BY 3.0
+

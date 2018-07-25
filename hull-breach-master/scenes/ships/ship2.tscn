@@ -1,0 +1,796 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://scripts/main/player.gd" type="Script" id=1]
+[ext_resource path="res://scripts/shader/hit.tres" type="Shader" id=2]
+[ext_resource path="res://images/lights/mask1.png" type="Texture" id=3]
+[ext_resource path="res://images/ships/ship2_c.png" type="Texture" id=4]
+[ext_resource path="res://images/ships/ship2_n.png" type="Texture" id=5]
+[ext_resource path="res://sounds/weapons/flaunch.wav" type="AudioStream" id=6]
+[ext_resource path="res://images/lights/spotlight.png" type="Texture" id=7]
+[ext_resource path="res://images/particles/bubble_small.png" type="Texture" id=8]
+[ext_resource path="res://images/particles/sphere_small_n.png" type="Texture" id=9]
+[ext_resource path="res://images/particles/splash01.png" type="Texture" id=10]
+[ext_resource path="res://images/lights/light01.png" type="Texture" id=11]
+[ext_resource path="res://images/particles/implosion01.png" type="Texture" id=12]
+[ext_resource path="res://scripts/shader/distortion.tres" type="Shader" id=13]
+[ext_resource path="res://images/particles/explosion_normal.png" type="Texture" id=14]
+[ext_resource path="res://images/particles/implosion04.png" type="Texture" id=15]
+[ext_resource path="res://sounds/explosions/explosion01.wav" type="AudioStream" id=16]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 2 )
+shader_param/hit = 0.0
+shader_param/vanish = 0.0
+shader_param/hframes = 7.0
+shader_param/vframes = 3.0
+shader_param/mask = ExtResource( 3 )
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="Gradient" id=2]
+
+offsets = PoolRealArray( 0, 0.112426, 0.526627, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.501961, 1, 1, 1, 0.501961, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+
+flags = 4
+gradient = SubResource( 2 )
+width = 2048
+
+[sub_resource type="Curve" id=4]
+
+min_value = 0.5
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.5 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+
+flags = 4
+width = 2048
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 10.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 48.0
+initial_velocity_random = 0.0
+angular_velocity = 1.96182e-44
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 24.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 0.5
+scale_random = 0.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Damping", "Gravity", "Initial Velocity", "Scale", "Spread" ]
+
+[sub_resource type="CanvasItemMaterial" id=7]
+
+render_priority = 0
+blend_mode = 0
+light_mode = 1
+
+[sub_resource type="ParticlesMaterial" id=8]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = true
+flag_rotate_y = false
+flag_disable_z = true
+spread = 0.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 48.0
+initial_velocity_random = 0.0
+angular_velocity = 1.96182e-44
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 48.0
+damping_random = 0.0
+angle = 90.0
+angle_random = 0.0
+scale = 0.5
+scale_random = 0.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Color", "Damping", "Flags", "Gravity", "Initial Velocity", "Scale", "Spread" ]
+
+[sub_resource type="CapsuleShape2D" id=9]
+
+custom_solver_bias = 0.0
+radius = 12.0
+height = 23.0
+
+[sub_resource type="Gradient" id=10]
+
+offsets = PoolRealArray( 0, 0.118343, 0.420118, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=11]
+
+flags = 4
+gradient = SubResource( 10 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=12]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 8.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 48.0
+initial_velocity_random = 0.25
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 32.0
+damping_random = 0.0
+angle = 360.0
+angle_random = 1.0
+scale = 1.0
+scale_random = 0.0
+color_ramp = SubResource( 11 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 1.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Animation", "Color", "Damping", "Emission Shape", "Initial Velocity", "Spread" ]
+
+[sub_resource type="ShaderMaterial" id=13]
+
+render_priority = 0
+shader = ExtResource( 13 )
+shader_param/scale = 0.05
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="Curve" id=14]
+
+min_value = 0.5
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.5 ), 0.0, 0.0, 0, 0, Vector2( 0.500383, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.5 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=15]
+
+flags = 4
+width = 2048
+curve = SubResource( 14 )
+
+[sub_resource type="ParticlesMaterial" id=16]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 16.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 32.0
+initial_velocity_random = 0.25
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 32.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.25
+scale_random = 0.25
+scale_curve = SubResource( 15 )
+color_ramp = SubResource( 11 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 1.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Animation", "Color", "Damping", "Emission Shape", "Initial Velocity", "Scale", "Spread" ]
+
+[sub_resource type="Animation" id=17]
+
+resource_name = "explode"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Implosion01:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Implosion02:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Engine1/Bubbles:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Engine1/Engine:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Engine2/Bubbles:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Engine2/Engine:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Light1:energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.5, 0.01 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Gun2/Light2:energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.01 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Gun1/Light3:energy")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.01 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Sprite:material:shader_param/hit")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Sprite:material:shader_param/vanish")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 2.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("BackBufferCopy:copy_mode")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Distortion:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Distortion:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 0.01, 0.01 ), Vector2( 1.2, 1.2 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+
+length = 0.2
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/hit")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 0.0 ]
+}
+
+[node name="Player" type="RigidBody2D"]
+
+input_pickable = false
+collision_layer = 3
+collision_mask = 3
+mode = 0
+mass = 11.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 4
+contact_monitor = true
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = 6.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear" ]
+gun_pos = Vector2( 9, 18 )
+engine_pos = Vector2( -18, -4 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+material = SubResource( 1 )
+position = Vector2( 4, 0 )
+rotation = 1.5708
+texture = ExtResource( 4 )
+normal_map = ExtResource( 5 )
+vframes = 3
+hframes = 7
+frame = 10
+_sections_unfolded = [ "Animation", "Material", "Transform" ]
+
+[node name="Gun1" type="Position2D" parent="." index="1"]
+
+position = Vector2( 9, 18 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Gun1" index="0"]
+
+stream = ExtResource( 6 )
+volume_db = -12.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Sound"
+area_mask = 1
+
+[node name="Light3" type="Light2D" parent="Gun1" index="1"]
+
+position = Vector2( 1, 0 )
+rotation = 0.174533
+enabled = true
+editor_only = false
+texture = ExtResource( 7 )
+offset = Vector2( 96, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 2.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Offset", "Range", "Shadow", "Transform" ]
+
+[node name="Gun2" type="Position2D" parent="." index="2"]
+
+position = Vector2( 9, -18 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Gun2" index="0"]
+
+stream = ExtResource( 6 )
+volume_db = -12.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Sound"
+area_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="Light2" type="Light2D" parent="Gun2" index="1"]
+
+position = Vector2( 1, 0 )
+rotation = -0.174533
+enabled = true
+editor_only = false
+texture = ExtResource( 7 )
+offset = Vector2( 96, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 2.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Offset", "Range", "Shadow", "Transform" ]
+
+[node name="Engine1" type="Position2D" parent="." index="3"]
+
+position = Vector2( -18, -4 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Bubbles" type="Particles2D" parent="Engine1" index="0"]
+
+modulate = Color( 1, 1, 1, 0.25098 )
+rotation = 3.14159
+emitting = false
+amount = 32
+lifetime = 2.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -800, -800, 1600, 1600 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 6 )
+texture = ExtResource( 8 )
+normal_map = ExtResource( 9 )
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
+
+[node name="Engine" type="Particles2D" parent="Engine1" index="1"]
+
+modulate = Color( 1, 1, 1, 0.25098 )
+material = SubResource( 7 )
+rotation = 3.14159
+emitting = false
+amount = 8
+lifetime = 0.5
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 8 )
+texture = ExtResource( 10 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
+
+[node name="Engine2" type="Position2D" parent="." index="4"]
+
+position = Vector2( -18, 4 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Bubbles" type="Particles2D" parent="Engine2" index="0"]
+
+modulate = Color( 1, 1, 1, 0.25098 )
+rotation = 3.14159
+emitting = false
+amount = 32
+lifetime = 2.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -800, -800, 1600, 1600 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 6 )
+texture = ExtResource( 8 )
+normal_map = ExtResource( 9 )
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
+
+[node name="Engine" type="Particles2D" parent="Engine2" index="1"]
+
+modulate = Color( 1, 1, 1, 0.25098 )
+material = SubResource( 7 )
+rotation = 3.14159
+emitting = false
+amount = 8
+lifetime = 0.5
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 8 )
+texture = ExtResource( 10 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Transform", "Visibility" ]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." index="5"]
+
+visible = false
+position = Vector2( 5, 0 )
+rotation = 1.5708
+shape = SubResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Light1" type="Light2D" parent="." index="6"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 11 )
+offset = Vector2( 0, 0 )
+texture_scale = 12.0
+color = Color( 1, 1, 1, 1 )
+energy = 0.75
+mode = 0
+range_height = 10.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Range", "Shadow" ]
+
+[node name="Implosion02" type="Particles2D" parent="." index="7"]
+
+modulate = Color( 0.752941, 0.752941, 0.752941, 0.501961 )
+emitting = false
+amount = 24
+lifetime = 0.75
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 12 )
+texture = ExtResource( 12 )
+normal_map = null
+h_frames = 5
+v_frames = 2
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Visibility" ]
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="." index="8"]
+
+copy_mode = 0
+rect = Rect2( -300, -300, 600, 600 )
+
+[node name="Distortion" type="Sprite" parent="." index="9"]
+
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+material = SubResource( 13 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 14 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="Implosion01" type="Particles2D" parent="." index="10"]
+
+modulate = Color( 1, 1, 1, 0.501961 )
+emitting = false
+amount = 32
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 16 )
+texture = ExtResource( 15 )
+normal_map = null
+h_frames = 3
+v_frames = 3
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Visibility" ]
+
+[node name="SoundExplosion" type="AudioStreamPlayer2D" parent="." index="11"]
+
+stream = ExtResource( 16 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Sound"
+area_mask = 1
+
+[node name="Animation" type="AnimationPlayer" parent="." index="12"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/explode = SubResource( 17 )
+anims/hit = SubResource( 18 )
+blend_times = [  ]
+
+

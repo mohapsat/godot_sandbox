@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/Test/test.gd" type="Script" id=1]
+[ext_resource path="res://addons/Test/Water2dIcon.png" type="Texture" id=2]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Water2D" type="Node2D" parent="." index="0"]
+
+modulate = Color( 0, 0.226563, 1, 0.508274 )
+position = Vector2( 0, 213.689 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+
+

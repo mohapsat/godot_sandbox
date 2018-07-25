@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/New Piskel (7).png-36163899afeb6a1cbd9d0b7d65d1515e.stex"
+
+[deps]
+
+source_file="res://addons/sprite/citizenanimation/New Piskel (7).png"
+source_md5="7c7a13c416dd5cdebf26ac87ddb6d9e0"
+
+dest_files=[ "res://.import/New Piskel (7).png-36163899afeb6a1cbd9d0b7d65d1515e.stex" ]
+dest_md5="4fab933edd158e012d308d4ea42ceeb6"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

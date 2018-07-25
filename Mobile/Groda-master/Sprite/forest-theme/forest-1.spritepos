@@ -1,0 +1,18 @@
+leaves 4: 0 0 436 298
+trunk: 437 0 180 256
+trunk 2: 618 0 180 256
+leaves 5: 0 299 362 250
+leaves 5 alt: 363 299 362 250
+roots: 0 550 485 207
+leaves 3: 486 550 303 197
+blue flower 2: 790 550 102 185
+leaves 2: 726 299 288 178
+blue flower 1: 893 550 113 164
+leaves 1: 0 758 264 160
+top: 265 758 497 140
+right branch: 763 758 187 125
+left leaves: 799 0 195 102
+left branch: 799 103 200 100
+middle branch: 951 758 60 99
+right leaves: 0 919 196 97
+middle leaves: 197 919 212 93

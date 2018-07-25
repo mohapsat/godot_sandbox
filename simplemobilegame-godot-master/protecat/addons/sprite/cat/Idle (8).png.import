@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Idle (8).png-fe71d88e209290542a8a27e935023b84.stex"
+
+[deps]
+
+source_file="res://addons/sprite/cat/Idle (8).png"
+source_md5="bf28663c27b26dd42f49ded4dbaf1b5c"
+
+dest_files=[ "res://.import/Idle (8).png-fe71d88e209290542a8a27e935023b84.stex" ]
+dest_md5="5d5eaee28f043833e2644dfe2f29004f"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

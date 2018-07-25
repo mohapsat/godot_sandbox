@@ -1,0 +1,462 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://images/tiles/rock_c.png" type="Texture" id=1]
+[ext_resource path="res://images/tiles/rock_n.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 0, 32, 32, 32, 32, 0, 16, 8, 8, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, 0, -24, 0, -8, 8, 8, 0, 32, 0, 32, 32, -32, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, 32, -32, 0, -24, 0, -8, 8, -8, 24, 0, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, 32, -32, -32, 0, -32, 0, 0, 8, 8, 8, 16, 0, 24, 0, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=6]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, 0, -32, -32, 0, -32, 0, -24, -16, -8, -24, -8 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 0, 16, 0, 8, -8, -24, 0, -32, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=8]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 32, 0, 32, -32, 0, -32, 8, -16, 24, -8 )
+
+[sub_resource type="OccluderPolygon2D" id=9]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 32, 32, 32, -32, 0, -32, 0, -24, -8, -8, -8, 8, 0, 24, 0, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=10]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 32, -32, -32, -32, -32, 32, 0, 32, 0, 24, 16, 8, 32, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=11]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 32, 32, 32, -32, -32, -32, -32, 0, -24, 0, -16, 16, -8, 16, 0, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=12]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, 32, 32, 32, 32, -32, 0, -32, -8, -16, -16, -16, -24, 0, -32, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=13]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 32, 32, -32, 32, -32, -32, 0, -32, 0, -24, 16, -16, 24, -16, 24, 0, 32, 0 )
+
+[node name="Tileset" type="Node"]
+
+[node name="Rock01" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 128, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock01" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock01/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock01" index="1"]
+
+occluder = SubResource( 1 )
+light_mask = 1
+
+[node name="Rock02" type="Sprite" parent="." index="1"]
+
+position = Vector2( -64, -64 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock02" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock02/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 8, 16, 16, 8, 32, 0, 32, 32, 0, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock02" index="1"]
+
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="Rock03" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0, -64 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 128, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock03" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock03/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, 0, -24, 0, -8, 8, 8, 0, 32, 0, 32, 32, -32, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock03" index="1"]
+
+occluder = SubResource( 3 )
+light_mask = 1
+
+[node name="Rock04" type="Sprite" parent="." index="3"]
+
+position = Vector2( 64, -64 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 192, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock04" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock04/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, 0, -24, 0, -8, 8, -8, 24, 0, 32, -32, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock04" index="1"]
+
+occluder = SubResource( 4 )
+light_mask = 1
+
+[node name="Rock05" type="Sprite" parent="." index="4"]
+
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 192, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock05" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock05/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, -32, 0, -32, 0, 0, 8, 8, 8, 16, 0, 24, 0, 32, -32, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock05" index="1"]
+
+occluder = SubResource( 5 )
+light_mask = 1
+
+[node name="Rock06" type="Sprite" parent="." index="5"]
+
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 192, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock06" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock06/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, -32, 0, -32, 0, -24, -16, -8, -24, -8, -32, 0 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock06" index="1"]
+
+occluder = SubResource( 6 )
+light_mask = 1
+
+[node name="Rock07" type="Sprite" parent="." index="6"]
+
+position = Vector2( 0, 64 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 128, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock07" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock07/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 0, 16, 0, 8, -8, -24, 0, -32, 0 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock07" index="1"]
+
+occluder = SubResource( 7 )
+light_mask = 1
+
+[node name="Rock08" type="Sprite" parent="." index="7"]
+
+position = Vector2( -64, 64 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock08" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock08/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, -32, 32, -32, 32, 0, 24, -8, 8, -16 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock08" index="1"]
+
+occluder = SubResource( 8 )
+light_mask = 1
+
+[node name="Rock09" type="Sprite" parent="." index="8"]
+
+position = Vector2( -64, 0 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock09" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock09/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, -32, 32, -32, 32, 32, 0, 32, 0, 24, -8, 8, -8, -8, 0, -24 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock09" index="1"]
+
+occluder = SubResource( 9 )
+light_mask = 1
+
+[node name="Rock10" type="Sprite" parent="." index="9"]
+
+position = Vector2( 184, -32 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock10/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 0, 16, 8, 8, 16, 0, 24, 0, 32, -32, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock10" index="1"]
+
+occluder = SubResource( 10 )
+light_mask = 1
+
+[node name="Rock11" type="Sprite" parent="." index="10"]
+
+position = Vector2( 248, -32 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 384, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock11" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock11/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, 0, 32, -8, 16, -16, 16, -24, 0, -32, 0 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock11" index="1"]
+
+occluder = SubResource( 11 )
+light_mask = 1
+
+[node name="Rock12" type="Sprite" parent="." index="11"]
+
+position = Vector2( 248, 32 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock12" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock12/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, 0, -24, 0, -16, -16, -8, -16, 0, -32, 32, -32, 32, 32, -32, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock12" index="1"]
+
+occluder = SubResource( 12 )
+light_mask = 1
+
+[node name="Rock13" type="Sprite" parent="." index="12"]
+
+position = Vector2( 184, 32 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 320, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock13" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock13/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, -32, 0, -32, 0, -24, 16, -16, 24, -16, 24, 0, 32, 0, 32, 32, -32, 32 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rock13" index="1"]
+
+occluder = SubResource( 13 )
+light_mask = 1
+
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/space_shield_sounds-9.wav-65d41f379ac595b2ad22c4eb8d5491d0.sample"
+
+[deps]
+
+source_file="res://sounds/space_shield_sounds/space_shield_sounds-9.wav"
+dest_files=[ "res://.import/space_shield_sounds-9.wav-65d41f379ac595b2ad22c4eb8d5491d0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

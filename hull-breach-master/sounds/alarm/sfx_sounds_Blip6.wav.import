@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_sounds_Blip6.wav-b23b551832e624fd44c702a2d8c899df.sample"
+
+[deps]
+
+source_file="res://sounds/alarm/sfx_sounds_Blip6.wav"
+dest_files=[ "res://.import/sfx_sounds_Blip6.wav-b23b551832e624fd44c702a2d8c899df.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

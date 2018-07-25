@@ -10,13 +10,13 @@
 custom_solver_bias = 0.0
 extents = Vector2( 323.777, 32.0043 )
 
-[node name="Bombs" type="Node2D"]
+[node name="Bombs" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 Bomb = ExtResource( 2 )
 Explosion = ExtResource( 3 )
 
-[node name="Ground" type="StaticBody2D" parent="."]
+[node name="Ground" type="StaticBody2D" parent="." index="0"]
 
 position = Vector2( 310.601, 446.874 )
 input_pickable = false
@@ -30,14 +30,14 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Ground"]
+[node name="Sprite" type="Sprite" parent="Ground" index="0"]
 
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 640, 64 )
 _sections_unfolded = [ "Region" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" index="1"]
 
 shape = SubResource( 1 )
 

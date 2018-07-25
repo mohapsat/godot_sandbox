@@ -1,0 +1,987 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://scripts/gui/ui.gd" type="Script" id=1]
+[ext_resource path="res://images/gui/panel_ship.png" type="Texture" id=2]
+[ext_resource path="res://fonts/font_yellow.tres" type="BitmapFont" id=3]
+[ext_resource path="res://images/gui/bar_hp.png" type="Texture" id=4]
+[ext_resource path="res://images/gui/bar_sp.png" type="Texture" id=5]
+[ext_resource path="res://images/gui/panel_weapon.png" type="Texture" id=6]
+[ext_resource path="res://images/gui/bar_up.png" type="Texture" id=7]
+[ext_resource path="res://images/gui/weapon_bar_progress.png" type="Texture" id=8]
+[ext_resource path="res://images/gui/weapon_bar_bg.png" type="Texture" id=9]
+[ext_resource path="res://fonts/font_black.tres" type="BitmapFont" id=10]
+[ext_resource path="res://images/gui/panel_radar.png" type="Texture" id=11]
+[ext_resource path="res://scripts/gui/radar.gd" type="Script" id=12]
+[ext_resource path="res://images/gui/radar_circle.png" type="Texture" id=13]
+[ext_resource path="res://sounds/alarm/sfx_sound_bling.wav" type="AudioStream" id=14]
+[ext_resource path="res://fonts/font_green.tres" type="BitmapFont" id=15]
+[ext_resource path="res://sounds/alarm/sfx_sounds_Blip6.wav" type="AudioStream" id=16]
+[ext_resource path="res://sounds/alarm/sfx_sounds_error1.wav" type="AudioStream" id=17]
+[ext_resource path="res://images/gui/cross.png" type="Texture" id=18]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 16, 6 )
+margin_left = 3.0
+margin_right = 3.0
+margin_top = 1.0
+margin_bottom = 1.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 16, 6 )
+margin_left = 3.0
+margin_right = 3.0
+margin_top = 1.0
+margin_bottom = 1.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "hide"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 52, 6 ), Vector2( 16, 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "show"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16, 6 ), Vector2( 52, 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "radar"
+length = 1.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Effect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Effect:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.1, 0.1 ), Vector2( 1.2, 1.2 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Effect:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 360.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 2.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SoundAlarm:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+
+[node name="UI" type="CanvasLayer"]
+
+layer = 100
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Ship" type="TextureRect" parent="." index="0"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 48.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 32, 48 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 2 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility" ]
+
+[node name="Icon" type="TextureRect" parent="Ship" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+expand = true
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="Score" type="Label" parent="Ship" index="1"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 33.0
+margin_top = 2.0
+margin_right = 129.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 96, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HP" type="HBoxContainer" parent="Ship" index="2"]
+
+editor/display_folded = true
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 33.0
+margin_top = 15.0
+margin_right = 73.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 128, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+custom_constants/separation = -4
+alignment = 0
+_sections_unfolded = [ "Size Flags", "Visibility", "custom_constants" ]
+
+[node name="HP1" type="TextureRect" parent="Ship/HP" index="0"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 15.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+_sections_unfolded = [ "Size Flags", "Visibility" ]
+
+[node name="HP2" type="TextureRect" parent="Ship/HP" index="1"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_right = 26.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HP3" type="TextureRect" parent="Ship/HP" index="2"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 22.0
+margin_right = 37.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HP4" type="TextureRect" parent="Ship/HP" index="3"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 33.0
+margin_right = 48.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HP5" type="TextureRect" parent="Ship/HP" index="4"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 44.0
+margin_right = 59.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HP6" type="TextureRect" parent="Ship/HP" index="5"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 55.0
+margin_right = 70.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HP7" type="TextureRect" parent="Ship/HP" index="6"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 66.0
+margin_right = 81.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HP8" type="TextureRect" parent="Ship/HP" index="7"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 77.0
+margin_right = 92.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HP9" type="TextureRect" parent="Ship/HP" index="8"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 88.0
+margin_right = 103.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="HP10" type="TextureRect" parent="Ship/HP" index="9"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 99.0
+margin_right = 114.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="SP" type="HBoxContainer" parent="Ship" index="3"]
+
+editor/display_folded = true
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 35.0
+margin_top = 37.0
+margin_right = 163.0
+margin_bottom = 47.0
+rect_min_size = Vector2( 128, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = -2
+alignment = 0
+_sections_unfolded = [ "Visibility" ]
+
+[node name="SP1" type="TextureRect" parent="Ship/SP" index="0"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 13.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP2" type="TextureRect" parent="Ship/SP" index="1"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_right = 24.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP3" type="TextureRect" parent="Ship/SP" index="2"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 22.0
+margin_right = 35.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP4" type="TextureRect" parent="Ship/SP" index="3"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 33.0
+margin_right = 46.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP5" type="TextureRect" parent="Ship/SP" index="4"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 44.0
+margin_right = 57.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP6" type="TextureRect" parent="Ship/SP" index="5"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 55.0
+margin_right = 68.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP7" type="TextureRect" parent="Ship/SP" index="6"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 66.0
+margin_right = 79.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP8" type="TextureRect" parent="Ship/SP" index="7"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 77.0
+margin_right = 90.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP9" type="TextureRect" parent="Ship/SP" index="8"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 88.0
+margin_right = 101.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="SP10" type="TextureRect" parent="Ship/SP" index="9"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 99.0
+margin_right = 112.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 5 )
+stretch_mode = 6
+
+[node name="Weapon" type="TextureRect" parent="." index="1"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -40.0
+margin_right = 32.0
+margin_bottom = -16.0
+rect_min_size = Vector2( 16, 24 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 6 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility" ]
+
+[node name="Upgrade" type="HBoxContainer" parent="Weapon" index="0"]
+
+editor/display_folded = true
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_top = 7.0
+margin_right = 81.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 64, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = -2
+alignment = 0
+_sections_unfolded = [ "Margin", "Rect", "Visibility", "custom_constants" ]
+
+[node name="UP1" type="TextureRect" parent="Weapon/Upgrade" index="0"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 13.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 7 )
+stretch_mode = 6
+
+[node name="UP2" type="TextureRect" parent="Weapon/Upgrade" index="1"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_right = 24.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 7 )
+stretch_mode = 6
+
+[node name="UP3" type="TextureRect" parent="Weapon/Upgrade" index="2"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 22.0
+margin_right = 35.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 7 )
+stretch_mode = 6
+
+[node name="UP4" type="TextureRect" parent="Weapon/Upgrade" index="3"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 33.0
+margin_right = 46.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 7 )
+stretch_mode = 6
+
+[node name="UP5" type="TextureRect" parent="Weapon/Upgrade" index="4"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 44.0
+margin_right = 57.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 2
+texture = ExtResource( 7 )
+stretch_mode = 6
+
+[node name="Icon" type="TextureRect" parent="Weapon" index="1"]
+
+show_behind_parent = true
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 16.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+expand = true
+stretch_mode = 6
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Bar" type="ProgressBar" parent="Weapon" index="2"]
+
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_right = 33.0
+margin_bottom = 6.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+custom_fonts/font = ExtResource( 10 )
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 50.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Margin", "Rect", "Visibility" ]
+
+[node name="Animation" type="AnimationPlayer" parent="Weapon/Bar" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/hide = SubResource( 3 )
+anims/show = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Radar" type="TextureRect" parent="." index="2"]
+
+modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -128.0
+margin_top = -128.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 11 )
+stretch_mode = 0
+script = ExtResource( 12 )
+_sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
+
+[node name="Effect" type="TextureRect" parent="Radar" index="0"]
+
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0.501961 )
+light_mask = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_rotation = 360.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 64, 64 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 13 )
+stretch_mode = 3
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility" ]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Radar" index="1"]
+
+stream = ExtResource( 14 )
+volume_db = -24.0
+autoplay = false
+mix_target = 0
+bus = "Sound"
+
+[node name="Animation" type="AnimationPlayer" parent="Radar" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/radar = SubResource( 5 )
+anims/sweep = SubResource( 6 )
+blend_times = [  ]
+
+[node name="FPS" type="Label" parent="." index="3"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.5
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 15 )
+text = "FPS: 00"
+align = 2
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility" ]
+
+[node name="SoundAlarm" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 16 )
+volume_db = -16.0
+autoplay = false
+mix_target = 0
+bus = "Sound"
+
+[node name="SoundNoAmmo" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 17 )
+volume_db = -12.0
+autoplay = false
+mix_target = 0
+bus = "Sound"
+
+[node name="Cross" type="Sprite" parent="." index="6"]
+
+light_mask = 0
+texture = ExtResource( 18 )
+vframes = 2
+hframes = 2
+_sections_unfolded = [ "Animation", "Visibility" ]
+
+[node name="AnimationAlarm" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/warning = SubResource( 7 )
+blend_times = [  ]
+
+

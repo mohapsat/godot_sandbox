@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/New Piskel (4).png-08796687cf9abd280288e62a92a9e6f4.stex"
+
+[deps]
+
+source_file="res://addons/sprite/New Piskel (4).png"
+source_md5="79584d55d723dccb2d62d71c61c1848a"
+
+dest_files=[ "res://.import/New Piskel (4).png-08796687cf9abd280288e62a92a9e6f4.stex" ]
+dest_md5="a0c136806cf33ab49064382e30aa2c67"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

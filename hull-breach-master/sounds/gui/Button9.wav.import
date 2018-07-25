@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Button9.wav-d47d9e0b82d450589bcc09522e7beff8.sample"
+
+[deps]
+
+source_file="res://sounds/gui/Button9.wav"
+dest_files=[ "res://.import/Button9.wav-d47d9e0b82d450589bcc09522e7beff8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

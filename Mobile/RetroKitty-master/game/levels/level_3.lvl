@@ -1,0 +1,19 @@
+# Seconds | Dispenser Number | Color Number | Speed(seconds to reach center)
+
+# Colors: RED, ORANGE, YELLOW, GREEN, CYAN, BLUE, PURPLE, PINK, WHITE = 8, BLACK = 9
+# Number: | UP = 0 | DOWN = 1 | LEFT = 2 | RIGHT = 3
+
+# GOAL: Start line with $
+$ 888
+
+&LEVEL 3 - Black & White
+
+# First dispenser
+1  2 8 3.5
+3  2 9 3.5
+5  3 8 3.5
+7  3 9 3.5
+9  2 8 3.5
+11 2 9 3.5
+13 3 8 3.5
+15 3 9 3.5

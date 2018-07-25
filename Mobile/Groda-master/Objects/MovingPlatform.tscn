@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/MovingPlatform.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="Curve2D" id=7]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -2.37079, -1.2016, 0, 0, 0, 0, 132.732, -1.45043, 0, 0, 0, 0, -1.73688, -1.03198 )
+}
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 61.2258, 15.9609 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 59.366, 2.35128 )
+
+[node name="MovingPlatform" type="Path2D"]
+
+z_index = 10
+curve = SubResource( 7 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+speed = 100
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." index="0"]
+
+position = Vector2( -2.37079, -1.2016 )
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = true
+lookahead = 4.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="PathFollow2D" index="0"]
+
+editor/display_folded = true
+position = Vector2( 2.60876, 0.508942 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PathFollow2D/StaticBody2D6" index="0"]
+
+scale = Vector2( 2, 0.5 )
+z_index = -10
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/StaticBody2D6" index="1"]
+
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D" index="1"]
+
+position = Vector2( 1.04895, -19.93 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D" index="0"]
+
+position = Vector2( 0.790559, 1.3176 )
+shape = SubResource( 9 )
+
+[connection signal="body_entered" from="PathFollow2D/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="body_exited" from="PathFollow2D/Area2D" to="." method="_on_Area2D_body_exited"]
+
+

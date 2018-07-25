@@ -14,6 +14,10 @@ config/name="P9_ArcadePhysics"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/handheld/emulate_touchscreen=true
+
 [importer_defaults]
 
 texture={
@@ -37,4 +41,5 @@ texture={
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"

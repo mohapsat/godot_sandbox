@@ -1,0 +1,18 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/citizen.tpsheet-d50eee6b3e6b50ecace68507411e6755.res"
+
+[deps]
+
+files=[ "res://addons/sprite/citizen.sprites/New Piskel (6).tres", "res://addons/sprite/citizen.sprites/New Piskel (7).tres", "res://addons/sprite/citizen.sprites/New Piskel (8).tres" ]
+
+source_file="res://addons/sprite/citizen.tpsheet"
+source_md5="f9ca83a1c54ad8492158d3ae6c3a5ca6"
+
+dest_files=[ "res://.import/citizen.tpsheet-d50eee6b3e6b50ecace68507411e6755.res", "res://addons/sprite/citizen.sprites/New Piskel (6).tres", "res://addons/sprite/citizen.sprites/New Piskel (7).tres", "res://addons/sprite/citizen.sprites/New Piskel (8).tres" ]
+dest_md5="de92473164102a370429b4b28bce6bea"
+
+[params]
+

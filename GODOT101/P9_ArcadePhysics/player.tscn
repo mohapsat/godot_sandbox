@@ -3,17 +3,17 @@
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://art/player/idle/frame-1.png" type="Texture" id=2]
 [ext_resource path="res://art/player/idle/frame-2.png" type="Texture" id=3]
-[ext_resource path="res://art/player/running/frame-1.png" type="Texture" id=4]
-[ext_resource path="res://art/player/running/frame-2.png" type="Texture" id=5]
-[ext_resource path="res://art/player/running/frame-3.png" type="Texture" id=6]
-[ext_resource path="res://art/player/running/frame-4.png" type="Texture" id=7]
-[ext_resource path="res://art/player/running/frame-5.png" type="Texture" id=8]
-[ext_resource path="res://art/player/running/frame-6.png" type="Texture" id=9]
-[ext_resource path="res://art/player/got hit/frame-got-hit.png" type="Texture" id=10]
-[ext_resource path="res://art/player/jump/jump_fall.png" type="Texture" id=11]
+[ext_resource path="res://art/player/got hit/frame-got-hit.png" type="Texture" id=4]
+[ext_resource path="res://art/player/jump/jump_fall.png" type="Texture" id=5]
+[ext_resource path="res://art/player/running/frame-1.png" type="Texture" id=6]
+[ext_resource path="res://art/player/running/frame-2.png" type="Texture" id=7]
+[ext_resource path="res://art/player/running/frame-3.png" type="Texture" id=8]
+[ext_resource path="res://art/player/running/frame-4.png" type="Texture" id=9]
+[ext_resource path="res://art/player/running/frame-5.png" type="Texture" id=10]
+[ext_resource path="res://art/player/running/frame-6.png" type="Texture" id=11]
 [ext_resource path="res://art/player/jump/jump_up.png" type="Texture" id=12]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
@@ -21,20 +21,20 @@ animations = [ {
 "name": "idle",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "running",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "got_hit",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "jump_fall",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "running",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
@@ -42,7 +42,7 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 46.6026
@@ -63,13 +63,39 @@ __meta__ = {
 [node name="sprite" type="AnimatedSprite" parent="." index="0"]
 
 scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "running"
 frame = 2
 _sections_unfolded = [ "Transform" ]
 
 [node name="collision" type="CollisionShape2D" parent="." index="1"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+
+[node name="camera" type="Camera2D" parent="." index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.5, 1.5 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Offset" ]
 
 

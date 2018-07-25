@@ -1,0 +1,24 @@
+# Seconds | Dispenser Number | Color Number | Speed(seconds to reach center)
+
+# Colors: RED, ORANGE, YELLOW, GREEN, CYAN, BLUE, PURPLE, PINK, WHITE = 8, BLACK = 9
+# Number: | UP = 0 | DOWN = 1  | LEFT = 2 | RIGHT = 3
+
+# GOAL: Start line with $
+$ 45 45 45
+
+&LEVEL 7 - Caravela
+
+1    1 4 2.5
+1.2  1 8 2.7
+2    2 5 2.5
+2.2  2 8 2.7
+4    0 4 1.5
+4.2  0 8 1.7
+5.5  3 5 2.5
+5.7  3 8 2.7
+7    1 4 3
+7.2  0 8 3
+9    2 5 3
+9.2  3 8 3
+10   0 4 4
+10.2 1 8 4

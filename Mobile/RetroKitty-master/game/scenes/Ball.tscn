@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Ball.gd" type="Script" id=1]
+[ext_resource path="res://resources/img/ball/def.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="Ball" type="RigidBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 0
+mode = 0
+mass = 1.0
+friction = 0.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z" ]
+min_speed = 1.0
+max_speed = 3.5
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( -0.0647211, -0.100649 )
+scale = Vector2( 1.12201, 1.12201 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
+
+visible = false
+position = Vector2( -0.0647203, 0.156374 )
+scale = Vector2( 0.79035, 0.867457 )
+rect = Rect2( -10, -10, 20, 20 )
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="out" from="." to="." method="_on_Ball_out"]
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+
+

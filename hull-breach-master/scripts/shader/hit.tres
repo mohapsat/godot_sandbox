@@ -1,0 +1,22 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+
+code = "shader_type canvas_item;
+
+uniform float hit = 0.0;
+uniform float vanish = 0.0;
+uniform sampler2D mask;
+uniform float hframes = 1;
+uniform float vframes = 1;
+
+void fragment()
+{
+	vec2 offset = vec2(0.5/hframes,0.5/vframes);
+	vec2 uv = ((UV-offset)/vanish+offset)*vec2(hframes,vframes);
+	uv -= floor(UV*vec2(hframes,vframes))*vec2(1)/vanish;
+	COLOR = texture(TEXTURE,UV);
+	COLOR.rgb += hit*vec3(1,1,1);
+	COLOR.a *= texture(mask,uv).g;
+}"
+

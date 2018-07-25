@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pong1.ogg-66658fcc2de3e9aa62a669ceee4d89f9.oggstr"
+
+[deps]
+
+source_file="res://resources/sounds/pong/pong1.ogg"
+dest_files=[ "res://.import/pong1.ogg-66658fcc2de3e9aa62a669ceee4d89f9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

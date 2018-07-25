@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Cat.gd" type="Script" id=1]
+[ext_resource path="res://addons/sprite/cat/Idle (2).png" type="Texture" id=2]
+[ext_resource path="res://addons/sprite/cat/Idle (3).png" type="Texture" id=3]
+[ext_resource path="res://addons/sprite/cat/Idle (4).png" type="Texture" id=4]
+[ext_resource path="res://addons/sprite/cat/Idle (5).png" type="Texture" id=5]
+[ext_resource path="res://addons/sprite/cat/Idle (6).png" type="Texture" id=6]
+[ext_resource path="res://addons/sprite/cat/Idle (7).png" type="Texture" id=7]
+[ext_resource path="res://addons/sprite/cat/Idle (9).png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[node name="Cat" type="Area2D"]
+
+position = Vector2( 480.783, 473.382 )
+scale = Vector2( 0.436904, 1.06986 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="cat" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( -12.5529, -178.804 )
+scale = Vector2( 0.714226, 0.312587 )
+frames = SubResource( 1 )
+animation = "default"
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 16.5508, -113.788, 35.7365, -146.807, 79.5895, -177.028, 56.2925, -205.57, 50.8109, -240.267, 15.1804, -238.029, -10.8574, -224.038, -39.6359, -226.836, -75.2665, -243.066, -97.193, -244.744, -109.527, -241.387, -117.749, -224.038, -116.379, -203.891, -132.824, -183.184, -135.564, -173.11, -87.6001, -157.44, -113.638, -141.771, -117.749, -130.578, -95.8225, -124.981, -78.0073, -126.101, -75.2665, -133.376, -68.4144, -127.779, -71.1552, -119.385, -71.1552, -113.229, -61.5624, -108.192, -46.4879, -106.513, -21.8207, -107.073, -20.4502, -110.431, -8.11658, -105.953, 6.95789, -109.871 )
+
+[connection signal="body_entered" from="." to="." method="_on_Cat_body_entered"]
+
+

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Dead (5).png-19de493fe00552979aa4bc231755eb40.stex"
+
+[deps]
+
+source_file="res://addons/sprite/cat/Dead (5).png"
+source_md5="cc443d8c3520f7123ed8a3a4419ded68"
+
+dest_files=[ "res://.import/Dead (5).png-19de493fe00552979aa4bc231755eb40.stex" ]
+dest_md5="aa42340000078778e47dd7c26b99a192"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
